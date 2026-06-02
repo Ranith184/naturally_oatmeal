@@ -508,10 +508,10 @@ export function AdminDashboard({ onLogout }) {
         )}
 
         {/* Tab Controls */}
-        <div className="flex border-b border-theoh-border/50 mb-6">
+        <div className="flex border-b border-theoh-border/50 mb-6 overflow-x-auto whitespace-nowrap scrollbar-hide">
           <button
             onClick={() => setActiveTab('orders')}
-            className={`py-3 px-6 font-bold text-sm tracking-wide border-b-2 transition-all uppercase ${
+            className={`py-3 px-6 font-bold text-sm tracking-wide border-b-2 transition-all uppercase shrink-0 ${
               activeTab === 'orders' 
                 ? 'border-[#004700] text-[#004700]' 
                 : 'border-transparent text-theoh-muted hover:text-theoh-brown'
@@ -521,7 +521,7 @@ export function AdminDashboard({ onLogout }) {
           </button>
           <button
             onClick={() => setActiveTab('analytics')}
-            className={`py-3 px-6 font-bold text-sm tracking-wide border-b-2 transition-all uppercase ${
+            className={`py-3 px-6 font-bold text-sm tracking-wide border-b-2 transition-all uppercase shrink-0 ${
               activeTab === 'analytics' 
                 ? 'border-[#004700] text-[#004700]' 
                 : 'border-transparent text-theoh-muted hover:text-theoh-brown'
@@ -531,7 +531,7 @@ export function AdminDashboard({ onLogout }) {
           </button>
           <button
             onClick={() => setActiveTab('menu')}
-            className={`py-3 px-6 font-bold text-sm tracking-wide border-b-2 transition-all uppercase ${
+            className={`py-3 px-6 font-bold text-sm tracking-wide border-b-2 transition-all uppercase shrink-0 ${
               activeTab === 'menu' 
                 ? 'border-[#004700] text-[#004700]' 
                 : 'border-transparent text-theoh-muted hover:text-theoh-brown'

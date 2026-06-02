@@ -1,11 +1,12 @@
 // src/components/common/Navbar.jsx
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { ShoppingCart, Leaf } from 'lucide-react';
+import { ShoppingCart, Leaf, Menu, X } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 
 export function Navbar() {
   const { totalCartItems, setIsCartOpen } = useCart();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   const linkStyles = ({ isActive }) =>
     `text-sm font-semibold tracking-wide uppercase transition-colors duration-200 py-1.5 px-3 rounded-full ${isActive
@@ -55,11 +56,11 @@ export function Navbar() {
           </div>
 
           {/* Action Row */}
-          <div className="flex items-center gap-4">
-            {/* Mobile Menu Link */}
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Mobile Menu Link (hidden on tiny screens if hamburger takes over, but we can keep it for quick order) */}
             <Link
               to="/menu"
-              className="md:hidden text-xs font-bold uppercase tracking-wider text-theoh-orange border border-theoh-orange/30 px-3 py-1.5 rounded-full bg-theoh-lightOrange/30 hover:bg-theoh-lightOrange/50 transition-colors"
+              className="hidden sm:block md:hidden text-xs font-bold uppercase tracking-wider text-theoh-orange border border-theoh-orange/30 px-3 py-1.5 rounded-full bg-theoh-lightOrange/30 hover:bg-theoh-lightOrange/50 transition-colors"
             >
               Order Now
             </Link>
@@ -77,6 +78,50 @@ export function Navbar() {
                 </span>
               )}
             </button>
+            
+            {/* Hamburger Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="md:hidden p-2 rounded-full text-theoh-brown bg-theoh-beige hover:bg-theoh-border/40 transition-colors ml-1"
+              aria-label="Open Menu"
+            >
+              <Menu size={20} />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Sliding Menu */}
+      <div 
+        className={`fixed inset-0 bg-black/50 z-50 transition-opacity duration-300 md:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <div 
+          className={`absolute right-0 top-0 bottom-0 w-64 bg-theoh-beige shadow-2xl flex flex-col transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          onClick={e => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-between p-4 border-b border-theoh-border/40">
+            <span className="text-lg font-black text-theoh-brown tracking-widest font-sans uppercase">Menu</span>
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-1.5 rounded-full hover:bg-theoh-border/40 text-theoh-brown transition-colors"
+            >
+              <X size={20} />
+            </button>
+          </div>
+          <div className="flex flex-col p-6 gap-6">
+            <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className={linkStyles}>Home</NavLink>
+            <NavLink to="/menu" onClick={() => setIsMobileMenuOpen(false)} className={linkStyles}>Build Menu</NavLink>
+            <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)} className={linkStyles}>Our Story</NavLink>
+          </div>
+          <div className="mt-auto p-6 border-t border-theoh-border/40">
+            <Link
+              to="/menu"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center bg-theoh-orange text-white font-bold py-3 rounded-full uppercase tracking-wider"
+            >
+              Order Now
+            </Link>
           </div>
         </div>
       </div>
