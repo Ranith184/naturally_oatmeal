@@ -13,18 +13,6 @@
       "inStock": true
     },
     {
-      "id": "b2",
-      "name": "Dry Fruits Oats",
-      "price": 130,
-      "tags": [
-        "High Protein",
-        "Healthy Fats"
-      ],
-      "desc": "Classic organic oats loaded with premium raisins, almonds, walnuts, and select premium dried fruits.",
-      "image": "",
-      "inStock": true
-    },
-    {
       "id": "b3",
       "name": "Fruit Oats",
       "price": 110,
@@ -90,17 +78,6 @@
       ],
       "desc": "Two slices of rustic multi-grain bread baked fresh with linseed, sunflowers, pumpkin, and sesame seeds.",
       "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc7c?w=600&q=80",
-      "inStock": true
-    },
-    {
-      "id": "b9",
-      "name": "Whole Grain Bread",
-      "price": 90,
-      "tags": [
-        "Fiber Rich"
-      ],
-      "desc": "Dense, nutrient-dense whole wheat grain loaf. Fresh, earthy, and satisfying.",
-      "image": "https://images.unsplash.com/photo-1565181152879-bc96b4ccfd69?w=600&q=80",
       "inStock": true
     }
   ],

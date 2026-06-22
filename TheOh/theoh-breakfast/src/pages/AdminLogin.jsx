@@ -35,7 +35,7 @@ export function AdminLogin({ onLoginSuccess }) {
             <ShieldAlert className="h-8 w-8 text-[#004700]" />
           </div>
           <h2 className="text-3xl font-black text-theoh-brown tracking-tight">
-            THEOH ADMIN
+            Naturally Eat & Fit Admin
           </h2>
           <p className="mt-2 text-sm text-theoh-muted font-medium">
             Please enter your administrator password to proceed to the dashboard.

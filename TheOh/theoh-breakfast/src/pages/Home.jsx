@@ -67,13 +67,13 @@ export function Home() {
       <section className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-theoh-orange bg-theoh-lightOrange px-3.5 py-1.5 rounded-full">
-            Why THEOH
+            Why Naturally Eat & Fit
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theoh-brown tracking-tight mt-4">
             Nourishing your body, crafted with love
           </h2>
           <p className="text-theoh-muted text-sm sm:text-base mt-3">
-            Say goodbye to heavy, oily breakfasts. THEOH brings premium, fiber-rich morning fuel straight from our clean local kitchen.
+            Say goodbye to heavy, oily breakfasts. Naturally Eat & Fit brings premium, fiber-rich morning fuel straight from our clean local kitchen.
           </p>
         </div>
 

@@ -9,7 +9,7 @@ import { WHATSAPP_NUMBER } from '../data';
 export function placeOrderWhatsApp(cartItems, customerInfo, totalCartPrice, orderId) {
   if (!cartItems || cartItems.length === 0) return;
 
-  const header = `🌿 *THEOH (ఓట్స్ హాబిట్)* 🌿\n_Fresh Breakfast Order_ *(${orderId ? orderId : 'New'})*\n━━━━━━━━━━━━━━━━━━━━\n\n`;
+  const header = `🌿 *Naturally Eat & Fit (ఓట్స్ హాబిట్)* 🌿\n_Fresh Breakfast Order_ *(${orderId ? orderId : 'New'})*\n━━━━━━━━━━━━━━━━━━━━\n\n`;
   
   const customerDetails = `👤 *CUSTOMER DETAILS*\n` +
     `• *Name:* ${customerInfo.name}\n` +

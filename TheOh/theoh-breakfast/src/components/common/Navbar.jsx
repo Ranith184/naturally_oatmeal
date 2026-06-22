@@ -44,7 +44,7 @@ export function Navbar() {
               <Leaf size={18} className="rotate-45" />
             </span>
             <span className="text-xl sm:text-2xl font-black text-theoh-brown tracking-widest font-sans uppercase">
-              THEOH!
+              Naturally Eat & Fit
             </span>
           </Link>
 

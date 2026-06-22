@@ -28,9 +28,9 @@
       "notes": "Test notes: please deliver warm."
     },
     "totalPrice": 390,
-    "status": "preparing",
+    "status": "delivered",
     "createdAt": "2026-05-26T05:03:17.973Z",
-    "updatedAt": "2026-05-26T05:03:17.996Z"
+    "updatedAt": "2026-06-02T07:08:26.381Z"
   },
   {
     "id": "TH-1002",
@@ -98,8 +98,9 @@
       "notes": "fewgsrdf"
     },
     "totalPrice": 200,
-    "status": "pending",
-    "createdAt": "2026-05-26T08:44:14.667Z"
+    "status": "delivered",
+    "createdAt": "2026-05-26T08:44:14.667Z",
+    "updatedAt": "2026-06-02T07:08:30.584Z"
   },
   {
     "id": "TH-1004",
@@ -258,8 +259,9 @@
       "notes": "etwgzdfaetgrzd"
     },
     "totalPrice": 120,
-    "status": "pending",
-    "createdAt": "2026-06-01T05:15:12.171Z"
+    "status": "out_for_delivery",
+    "createdAt": "2026-06-01T05:15:12.171Z",
+    "updatedAt": "2026-06-03T11:38:07.863Z"
   },
   {
     "id": "TH-1009",
@@ -294,7 +296,8 @@
       "notes": "43ayetrstry"
     },
     "totalPrice": 190,
-    "status": "pending",
-    "createdAt": "2026-06-01T05:33:15.905Z"
+    "status": "canceled",
+    "createdAt": "2026-06-01T05:33:15.905Z",
+    "updatedAt": "2026-06-03T11:38:02.343Z"
   }
 ]

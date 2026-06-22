@@ -264,5 +264,5 @@ io.on('connection', (socket) => {
 });
 
 httpServer.listen(PORT, '0.0.0.0', () => {
-  console.log(`THEOH Breakfast Server running on port ${PORT}`);
+  console.log(`Naturally Eat & Fit Breakfast Server running on port ${PORT}`);
 });

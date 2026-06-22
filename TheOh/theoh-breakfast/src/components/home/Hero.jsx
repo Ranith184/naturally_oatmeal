@@ -85,7 +85,7 @@ export function Hero() {
           <div className="flex items-center gap-2">
             <Leaf size={24} className="text-white" />
             <span className="text-xs font-black uppercase tracking-[0.2em] bg-[#F5ECE3]/30 border border-[#EADBCC]/30 px-3 py-1 rounded-full">
-              THEOH <span className="text-theoh-orange font-black">·</span> Breakfast Club
+              Naturally Eat & Fit <span className="text-theoh-orange font-black">·</span> Breakfast Club
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-snug">

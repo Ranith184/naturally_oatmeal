@@ -183,7 +183,7 @@ export function CartDrawer() {
                 </div>
 
                 <p className="text-sm text-theoh-muted leading-relaxed mb-8 px-4 font-medium">
-                  Thank you for choosing THEOH, <span className="font-bold text-theoh-brown">{placedOrder.customer.name}</span>! We have saved your order in our database. Click below to confirm via WhatsApp so we can coordinate your fresh morning delivery.
+                  Thank you for choosing Naturally Eat & Fit, <span className="font-bold text-theoh-brown">{placedOrder.customer.name}</span>! We have saved your order in our database. Click below to confirm via WhatsApp so we can coordinate your fresh morning delivery.
                 </p>
 
                 <div className="w-full space-y-3">

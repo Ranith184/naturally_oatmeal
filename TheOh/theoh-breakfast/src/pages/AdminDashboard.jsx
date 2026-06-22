@@ -399,7 +399,7 @@ export function AdminDashboard({ onLogout }) {
                 <ShoppingBag size={20} />
               </div>
               <div>
-                <span className="font-black text-theoh-brown text-lg uppercase tracking-wide">THEOH</span>
+                <span className="font-black text-theoh-brown text-lg uppercase tracking-wide">Naturally Eat & Fit</span>
                 <span className="text-xs bg-[#E8F5E9] text-[#004700] ml-2 px-2.5 py-0.5 rounded-full font-black uppercase">Admin Panel</span>
               </div>
             </div>

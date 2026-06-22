@@ -10,7 +10,7 @@ export function Footer() {
           {/* Logo Brand & Slogan */}
           <div>
             <h3 className="text-2xl font-black tracking-widest text-[#FFD89E] uppercase mb-3">
-              THEOH
+              Naturally Eat & Fit
             </h3>
             <p className="text-[#E8D9C4] text-xs font-bold uppercase tracking-wider mb-2">
               ఓట్స్ హాబిట్ — Oat's Habit
@@ -45,7 +45,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col items-center md:items-start gap-3.5 text-sm text-[#C4B4A4]">
               <a 
-                href="https://www.instagram.com/theoh.hyd" 
+                href="https://www.instagram.com/naturally.eat.fit" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="flex items-center gap-2.5 hover:text-white transition-colors group"
@@ -53,7 +53,7 @@ export function Footer() {
                 <span className="p-2 rounded-full bg-[#4E341A] group-hover:bg-theoh-orange group-hover:text-white transition-colors">
                   <Instagram size={15} />
                 </span>
-                <span>@theoh.hyd on Instagram</span>
+                <span>@naturally.eat.fit on Instagram</span>
               </a>
               <div className="flex items-center gap-2.5">
                 <span className="p-2 rounded-full bg-[#4E341A]">
@@ -68,7 +68,7 @@ export function Footer() {
 
         {/* Separator line */}
         <div className="border-t border-[#4E341A] mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-center gap-4 text-xs text-[#C4B4A4]">
-          <p>© {new Date().getFullYear()} THEOH Breakfast Co. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Naturally Eat & Fit Breakfast Co. All rights reserved.</p>
           <p className="flex items-center gap-1.5 justify-center">
             Handcrafted with <Heart size={12} className="text-theoh-orange fill-theoh-orange animate-pulse" /> in Hyderabad
           </p>

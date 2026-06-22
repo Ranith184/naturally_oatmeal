@@ -66,10 +66,10 @@ export function About() {
           className="bg-theoh-cream p-8 sm:p-12 rounded-3xl border border-theoh-border shadow-premium text-theoh-text leading-relaxed"
         >
           <h2 className="text-2xl sm:text-3xl font-extrabold text-theoh-brown mb-6">
-            What is THEOH?
+            What is Naturally Eat & Fit?
           </h2>
           <p className="mb-6 text-[#4A3520] text-sm sm:text-base">
-            THEOH started as a small, passionate kitchen experiment in Hyderabad. We noticed a recurring problem: busy professionals, fitness enthusiasts, and health-conscious eaters wanted a clean, nutrient-dense breakfast but lacked the time to wash fruits, shell nuts, and prepare rolled oatmeal at 6:30 AM.
+            Naturally Eat & Fit started as a small, passionate kitchen experiment in Hyderabad. We noticed a recurring problem: busy professionals, fitness enthusiasts, and health-conscious eaters wanted a clean, nutrient-dense breakfast but lacked the time to wash fruits, shell nuts, and prepare rolled oatmeal at 6:30 AM.
           </p>
           <p className="mb-6 text-[#4A3520] text-sm sm:text-base">
             We believe that what you eat in the first hour of your morning outlines the trajectory of your entire day. Our concept is straightforward: we source 100% organic rolled oats, prepare delicious slow-soaked mixtures, source direct-from-farm fresh berries and seasonal mangoes, make our almond and peanut spreads in-house, and deliver it exactly as you build it.
