@@ -102,8 +102,8 @@ export function Menu() {
         // Select base and addons in context
         selectCombo(baseItem, addonsToSelect);
         
-        // Go directly to Step 2
-        setStep(2);
+        // Remain on Step 1 (Pick Base) to show the products list
+        setStep(1);
         
         // Clear location state so refreshes don't lock or re-select
         window.history.replaceState({}, document.title);
