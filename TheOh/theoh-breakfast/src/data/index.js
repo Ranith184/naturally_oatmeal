@@ -20,44 +20,68 @@ export const ADDONS = {
 export const COMBOS = [
   {
     "id": "c1",
-    "name": "The Power Bowl",
-    "base": "High Protein Oats Chocolate",
+    "name": "High Protein Brown Rice Bowl",
+    "base": "Plain Oats (Soaked/Boiled)",
     "addons": [
-      "Almonds",
-      "Peanut Butter",
-      "Banana"
+      "All Mix Nuts",
+      "Almonds"
     ],
-    "price": 235,
-    "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&q=80",
-    "tag": "Best for Gym",
+    "price": 260,
+    "image": "/assets/images/brown_rice_bowl.png",
+    "tag": "Best Seller",
     "inStock": true
   },
   {
     "id": "c2",
-    "name": "The Fruit Paradise",
-    "base": "Fruit Oats",
+    "name": "High Protein Quinoa Rice Bowl",
+    "base": "Plain Oats (Soaked/Boiled)",
     "addons": [
-      "Strawberry",
-      "Blueberry",
-      "Mango"
+      "Chia Seeds",
+      "Almonds"
     ],
-    "price": 195,
-    "image": "https://images.unsplash.com/photo-1614961909372-5e11b6a0ae54?w=400&q=80",
-    "tag": "Vitamins Rich",
+    "price": 280,
+    "image": "/assets/images/quinoa_rice_bowl.png",
+    "tag": "Superfood",
     "inStock": true
   },
   {
     "id": "c3",
-    "name": "The Nut Crunch",
-    "base": "Muesli",
+    "name": "Lean Life Salad",
+    "base": "Fruit Oats",
     "addons": [
-      "All Mix Nuts",
-      "Dark Chocolate Peanut Butter",
+      "Apple",
       "Chia Seeds"
     ],
-    "price": 250,
-    "image": "https://images.unsplash.com/photo-1504308805006-0f7a5f1adea4?w=400&q=80",
-    "tag": "High Energy",
+    "price": 220,
+    "image": "/assets/images/lean_life_salad.png",
+    "tag": "Weight Loss",
+    "inStock": true
+  },
+  {
+    "id": "c4",
+    "name": "Overnight Oats Bowl",
+    "base": "All Mix Oats (Fruits & Nuts)",
+    "addons": [
+      "Strawberry",
+      "Chia Seeds",
+      "Honey"
+    ],
+    "price": 180,
+    "image": "/assets/images/overnight_oats_bowl.png",
+    "tag": "Morning Favorite",
+    "inStock": true
+  },
+  {
+    "id": "c5",
+    "name": "Cold Pressed Juice",
+    "base": "Fruit Oats",
+    "addons": [
+      "Apple",
+      "Grapes"
+    ],
+    "price": 140,
+    "image": "/assets/images/cold_pressed_juice.png",
+    "tag": "Raw & Fresh",
     "inStock": true
   }
 ];

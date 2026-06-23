@@ -1,6 +1,90 @@
 {
   "bases": [
     {
+      "id": "b10",
+      "name": "High Protein Grilled Chicken Brown Rice Bowl",
+      "price": 260,
+      "tags": [
+        "High Protein"
+      ],
+      "category": "High Protein Brown Rice Bowls",
+      "desc": "Steamed organic brown rice loaded with premium lean grilled chicken breast, roasted broccoli, edamame, and zero-sugar homemade dressings.",
+      "image": "/assets/images/brown_rice_bowl.png",
+      "nutrition": { "calories": "450 kcal", "protein": "35g", "carbs": "52g", "fiber": "6g", "fat": "8g" },
+      "benefit": "Excellent for muscle recovery and maintaining lean mass.",
+      "inStock": true
+    },
+    {
+      "id": "b11",
+      "name": "High Protein Paneer Brown Rice Bowl",
+      "price": 250,
+      "tags": [
+        "High Protein"
+      ],
+      "category": "High Protein Brown Rice Bowls",
+      "desc": "Wholesome organic brown rice served with high-protein grilled paneer cubes, roasted seasonal veggies, and signature sugar-free dressing.",
+      "image": "/assets/images/brown_rice_bowl.png",
+      "nutrition": { "calories": "480 kcal", "protein": "22g", "carbs": "54g", "fiber": "6g", "fat": "14g" },
+      "benefit": "Slow-digesting protein fuels energy throughout the afternoon.",
+      "inStock": true
+    },
+    {
+      "id": "b12",
+      "name": "High Protein Grilled Chicken Quinoa Bowl",
+      "price": 280,
+      "tags": [
+        "High Protein"
+      ],
+      "category": "High Protein Quinoa Rice Bowls",
+      "desc": "Nutrient-dense organic quinoa served with grilled chicken breast, sliced avocado, edamame, and light herb vinaigrette.",
+      "image": "/assets/images/quinoa_rice_bowl.png",
+      "nutrition": { "calories": "420 kcal", "protein": "38g", "carbs": "44g", "fiber": "8g", "fat": "9g" },
+      "benefit": "Complete amino acid profile boosts metabolism and muscle repair.",
+      "inStock": true
+    },
+    {
+      "id": "b13",
+      "name": "High Protein Tofu Quinoa Bowl",
+      "price": 270,
+      "tags": [
+        "High Protein"
+      ],
+      "category": "High Protein Quinoa Rice Bowls",
+      "desc": "Organic quinoa bowl topped with high protein grilled tofu, shredded carrots, spinach leaves, and fresh citrus dressing.",
+      "image": "/assets/images/quinoa_rice_bowl.png",
+      "nutrition": { "calories": "390 kcal", "protein": "20g", "carbs": "46g", "fiber": "8g", "fat": "10g" },
+      "benefit": "100% plant-based protein rich in iron and heart-healthy fats.",
+      "inStock": true
+    },
+    {
+      "id": "b14",
+      "name": "Lean Life Green Salad",
+      "price": 220,
+      "tags": [
+        "Fiber Rich"
+      ],
+      "category": "Lean Life Salads",
+      "desc": "Crisp organic baby spinach, arugula, cherry tomatoes, sliced cucumbers, and avocado, sprinkled with walnuts and chia seeds.",
+      "image": "/assets/images/lean_life_salad.png",
+      "nutrition": { "calories": "180 kcal", "protein": "6g", "carbs": "12g", "fiber": "7g", "fat": "12g" },
+      "benefit": "Antioxidant-rich greens support cellular health and weight management.",
+      "inStock": true
+    },
+    {
+      "id": "b15",
+      "name": "Weight Loss Avocado Salad",
+      "price": 240,
+      "tags": [
+        "Healthy Fats"
+      ],
+      "category": "Lean Life Salads",
+      "desc": "Fresh avocado chunks, mixed organic greens, sunflower seeds, and citrus segments, tossed in extra virgin olive oil. 100% clean nutrition.",
+      "image": "/assets/images/lean_life_salad.png",
+      "nutrition": { "calories": "240 kcal", "protein": "8g", "carbs": "16g", "fiber": "9g", "fat": "18g" },
+      "benefit": "Healthy monounsaturated fats keep sugar cravings at bay.",
+      "inStock": true
+    },
+    {
       "id": "b1",
       "name": "All Mix Oats (Fruits & Nuts)",
       "price": 120,
@@ -8,8 +92,11 @@
         "Fiber Rich",
         "Fresh Fruits"
       ],
-      "desc": "A wholesome mix of organic oats soaked overnight, topped with handpicked seasonal fruits and crunchy premium nuts.",
+      "category": "Overnight Oats Bowls",
+      "desc": "A wholesome mix of organic oats slow-soaked overnight in pure organic buffalo milk, topped with handpicked seasonal fruits and crunchy premium nuts. Zero added sugar.",
       "image": "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=600&q=80",
+      "nutrition": { "calories": "310 kcal", "protein": "12g", "carbs": "48g", "fiber": "9g", "fat": "8g" },
+      "benefit": "Steady morning energy release and improved digestion.",
       "inStock": true
     },
     {
@@ -20,8 +107,11 @@
         "Fresh Fruits",
         "Fiber Rich"
       ],
-      "desc": "Light and healthy oatmeal topped with fresh seasonal fruit slices, naturally sweetened.",
+      "category": "Overnight Oats Bowls",
+      "desc": "Light and healthy oatmeal prepared with organic buffalo milk and topped with fresh seasonal fruit slices. Naturally sweetened, zero sugars or artificial colors.",
       "image": "https://images.unsplash.com/photo-1614961909372-5e11b6a0ae54?w=600&q=80",
+      "nutrition": { "calories": "260 kcal", "protein": "10g", "carbs": "46g", "fiber": "8g", "fat": "4g" },
+      "benefit": "Vitamin-rich fruits support a healthy immune system.",
       "inStock": true
     },
     {
@@ -31,8 +121,11 @@
       "tags": [
         "High Protein"
       ],
-      "desc": "Protein-packed classic rolled oats infused with premium, rich dark cocoa and organic plant protein.",
+      "category": "Overnight Oats Bowls",
+      "desc": "Protein-packed classic rolled oats infused with rich dark cocoa, organic plant protein, and pure organic buffalo milk. Zero sugars, zero artificial colors, nothing bad.",
       "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80",
+      "nutrition": { "calories": "380 kcal", "protein": "28g", "carbs": "42g", "fiber": "8g", "fat": "7g" },
+      "benefit": "Satisfies sweet cravings healthily while promoting muscle protein synthesis.",
       "inStock": true
     },
     {
@@ -42,8 +135,11 @@
       "tags": [
         "Fiber Rich"
       ],
-      "desc": "Traditional Swiss-style muesli featuring multi-grains, honey, select seeds, and sun-dried fruit bits.",
+      "category": "Overnight Oats Bowls",
+      "desc": "Traditional Swiss-style muesli featuring multi-grains, raw honey, select seeds, and sun-dried fruit bits. Best served with cold organic buffalo milk. Zero artificial colors.",
       "image": "https://images.unsplash.com/photo-1504308805006-0f7a5f1adea4?w=600&q=80",
+      "nutrition": { "calories": "290 kcal", "protein": "11g", "carbs": "49g", "fiber": "7g", "fat": "6g" },
+      "benefit": "Heart-healthy grains aid cholesterol management.",
       "inStock": true
     },
     {
@@ -53,31 +149,39 @@
       "tags": [
         "Fiber Rich"
       ],
-      "desc": "Simplicity at its best. Perfectly soaked or boiled premium organic oats, the classic canvas for custom toppings.",
+      "category": "Overnight Oats Bowls",
+      "desc": "Simplicity at its best. Perfectly soaked in pure organic buffalo milk or slow-boiled. The classic healthy canvas for custom toppings. Zero sugars, zero artificial colors.",
       "image": "https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=600&q=80",
+      "nutrition": { "calories": "190 kcal", "protein": "8g", "carbs": "32g", "fiber": "6g", "fat": "3g" },
+      "benefit": "Beta-glucan fiber supports digestion and metabolic balance.",
       "inStock": true
     },
     {
-      "id": "b7",
-      "name": "Brown Bread",
-      "price": 80,
+      "id": "b16",
+      "name": "Green Detox Cold Pressed Juice",
+      "price": 140,
       "tags": [
         "Fiber Rich"
       ],
-      "desc": "Two slices of freshly baked, wholesome brown bread made from local organic wheat.",
-      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+      "category": "Cold Pressed Juices",
+      "desc": "100% raw juice cold-pressed from fresh organic celery, green apple, cucumber, mint, and ginger. Zero water, zero sugars, zero preservatives.",
+      "image": "/assets/images/cold_pressed_juice.png",
+      "nutrition": { "calories": "95 kcal", "protein": "3g", "carbs": "18g", "fiber": "4g", "fat": "0.5g" },
+      "benefit": "Highly alkalizing juice that flushes toxins and hydrates cells.",
       "inStock": true
     },
     {
-      "id": "b8",
-      "name": "Multi Grain Bread",
-      "price": 95,
+      "id": "b17",
+      "name": "Pure Orange Cold Pressed Juice",
+      "price": 130,
       "tags": [
-        "Fiber Rich",
-        "High Protein"
+        "Fresh Fruits"
       ],
-      "desc": "Two slices of rustic multi-grain bread baked fresh with linseed, sunflowers, pumpkin, and sesame seeds.",
-      "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc7c?w=600&q=80",
+      "category": "Cold Pressed Juices",
+      "desc": "100% organic cold-pressed fresh oranges. High in Vitamin C, naturally sweet, zero sugars, zero added water.",
+      "image": "/assets/images/cold_pressed_juice.png",
+      "nutrition": { "calories": "110 kcal", "protein": "2g", "carbs": "24g", "fiber": "2g", "fat": "0.2g" },
+      "benefit": "Burst of vitamin C provides skin health and immune defense.",
       "inStock": true
     }
   ],
@@ -405,44 +509,68 @@
   "combos": [
     {
       "id": "c1",
-      "name": "The Power Bowl",
-      "base": "High Protein Oats Chocolate",
+      "name": "High Protein Brown Rice Bowl",
+      "base": "Plain Oats (Soaked/Boiled)",
       "addons": [
-        "Almonds",
-        "Peanut Butter",
-        "Banana"
+        "All Mix Nuts",
+        "Almonds"
       ],
-      "price": 235,
-      "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&q=80",
-      "tag": "Best for Gym",
+      "price": 260,
+      "image": "/assets/images/brown_rice_bowl.png",
+      "tag": "Best Seller",
       "inStock": true
     },
     {
       "id": "c2",
-      "name": "The Fruit Paradise",
-      "base": "Fruit Oats",
+      "name": "High Protein Quinoa Rice Bowl",
+      "base": "Plain Oats (Soaked/Boiled)",
       "addons": [
-        "Strawberry",
-        "Blueberry",
-        "Mango"
+        "Chia Seeds",
+        "Almonds"
       ],
-      "price": 195,
-      "image": "https://images.unsplash.com/photo-1614961909372-5e11b6a0ae54?w=400&q=80",
-      "tag": "Vitamins Rich",
+      "price": 280,
+      "image": "/assets/images/quinoa_rice_bowl.png",
+      "tag": "Superfood",
       "inStock": true
     },
     {
       "id": "c3",
-      "name": "The Nut Crunch",
-      "base": "Muesli",
+      "name": "Lean Life Salad",
+      "base": "Fruit Oats",
       "addons": [
-        "All Mix Nuts",
-        "Dark Chocolate Peanut Butter",
+        "Apple",
         "Chia Seeds"
       ],
-      "price": 250,
-      "image": "https://images.unsplash.com/photo-1504308805006-0f7a5f1adea4?w=400&q=80",
-      "tag": "High Energy",
+      "price": 220,
+      "image": "/assets/images/lean_life_salad.png",
+      "tag": "Weight Loss",
+      "inStock": true
+    },
+    {
+      "id": "c4",
+      "name": "Overnight Oats Bowl",
+      "base": "All Mix Oats (Fruits & Nuts)",
+      "addons": [
+        "Strawberry",
+        "Chia Seeds",
+        "Honey"
+      ],
+      "price": 180,
+      "image": "/assets/images/overnight_oats_bowl.png",
+      "tag": "Morning Favorite",
+      "inStock": true
+    },
+    {
+      "id": "c5",
+      "name": "Cold Pressed Juice",
+      "base": "Fruit Oats",
+      "addons": [
+        "Apple",
+        "Grapes"
+      ],
+      "price": 140,
+      "image": "/assets/images/cold_pressed_juice.png",
+      "tag": "Raw & Fresh",
       "inStock": true
     }
   ]

@@ -1,29 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Leaf, Award, Heart, ShieldAlert } from 'lucide-react';
+import { Leaf, Heart, ShieldCheck, Milk, Package } from 'lucide-react';
 import { STORY_BG } from '../data';
 
 export function About() {
   const values = [
     { 
-      icon: <Leaf size={28} className="text-theoh-green" />, 
-      title: "Whole Ingredients", 
-      desc: "We focus strictly on rolled organic grains, raw cold-pressed fats, and fresh hand-cut seasonal fruits." 
+      icon: <Milk size={28} className="text-[#3F51B5]" />, 
+      title: "Organic Buffalo Milk", 
+      desc: "Rich, creamy, and sourced from local grass-fed buffaloes. No milk powders, no synthetic additives." 
     },
     { 
-      icon: <ShieldAlert size={28} className="text-theoh-orange" />, 
-      title: "No Preservatives", 
-      desc: "Our bowls are made fresh from scratch every single morning. We never use artificial syrups or thickeners." 
+      icon: <Package size={28} className="text-[#E8894A]" />, 
+      title: "Eco-Friendly Packaging", 
+      desc: "100% plastic-free, compostable, biodegradable boxes and utensils. Savor breakfast while preserving nature." 
     },
     { 
-      icon: <Award size={28} className="text-theoh-softOrange" />, 
-      title: "Morning Prep Only", 
-      desc: "Our kitchens run in the quiet hours of dawn. What you eat was sourced and prepared just hours before." 
+      icon: <ShieldCheck size={28} className="text-theoh-green" />, 
+      title: "Zero Sugar & Colors", 
+      desc: "We focus on real whole ingredients. Zero chemical preservatives, zero refined sugars, and zero coloring agents." 
     },
     { 
       icon: <Heart size={28} className="text-[#E91E63]" />, 
-      title: "Hyderabad Local", 
-      desc: "Deeply rooted in Hyderabad. Supporting local fruit growers, dairy farmers, and artisanal bakers." 
+      title: "Hyderabad Sourced", 
+      desc: "Deeply rooted in Hyderabad. Sourcing direct from local fruit orchards, dairy farms, and artisanal bakers." 
     },
   ];
 
@@ -72,10 +72,13 @@ export function About() {
             Naturally Eat & Fit started as a small, passionate kitchen experiment in Hyderabad. We noticed a recurring problem: busy professionals, fitness enthusiasts, and health-conscious eaters wanted a clean, nutrient-dense breakfast but lacked the time to wash fruits, shell nuts, and prepare rolled oatmeal at 6:30 AM.
           </p>
           <p className="mb-6 text-[#4A3520] text-sm sm:text-base">
-            We believe that what you eat in the first hour of your morning outlines the trajectory of your entire day. Our concept is straightforward: we source 100% organic rolled oats, prepare delicious slow-soaked mixtures, source direct-from-farm fresh berries and seasonal mangoes, make our almond and peanut spreads in-house, and deliver it exactly as you build it.
+            We believe that what you eat in the first hour of your morning outlines the trajectory of your entire day. Our concept is straightforward: we source 100% organic rolled oats, prepare delicious slow-soaked mixtures using **pure organic buffalo milk**, source direct-from-farm fresh berries and seasonal fruits, make our almond and peanut spreads in-house, and deliver it exactly as you build it.
+          </p>
+          <p className="mb-6 text-[#4A3520] text-sm sm:text-base">
+            Purity and sustainability run deep in everything we do. We refuse to use refined sugars, artificial colorings, or chemical preservatives — zero sugars, zero colorings, and nothing bad. To match our pure ingredients, our delivery boxes are **100% eco-friendly and plastic-free**. Every bowl is delivered in compostable packaging with wooden spoons because caring for your body goes hand in hand with protecting our environment.
           </p>
           <p className="text-[#4A3520] font-semibold text-sm sm:text-base">
-            No long storage processes. No complex ingredient lists. Just real whole food, custom-crafted by you, prepared fresh by us, delivered cold before you start your workday.
+            No long storage processes. No complex ingredient lists. Just real whole food, custom-crafted by you, prepared fresh by us, delivered cold in eco-friendly boxes before you start your workday.
           </p>
         </motion.div>
       </section>

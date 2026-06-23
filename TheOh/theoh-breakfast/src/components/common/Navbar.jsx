@@ -1,12 +1,13 @@
 // src/components/common/Navbar.jsx
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Leaf, Menu, X } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 
 export function Navbar() {
   const { totalCartItems, setIsCartOpen } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const { pathname } = useLocation();
 
   const linkStyles = ({ isActive }) =>
     `text-sm font-semibold tracking-wide uppercase transition-colors duration-200 py-1.5 px-3 rounded-full ${isActive
@@ -16,25 +17,46 @@ export function Navbar() {
 
   // ----- scroll handling -----
   const [scrolled, setScrolled] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(true);
+  const lastScrollY = React.useRef(0);
+
   React.useEffect(() => {
     const handleScroll = () => {
-      const hero = document.getElementById('hero');
-      const heroHeight = hero ? hero.offsetHeight : window.innerHeight * 0.6;
-      setScrolled(window.scrollY > heroHeight);
+      const currentScrollY = window.scrollY;
+
+      // Determine background state
+      setScrolled(currentScrollY > 50);
+
+      // Hide or show navbar based on scroll direction
+      if (currentScrollY <= 80) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down
+        setIsVisible(false);
+      } else {
+        // Scrolling up
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     // initial check
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navBgClass = scrolled
-    ? 'bg-theoh-beige border-b border-theoh-border shadow-sm'
-    : 'bg-transparent'; // fully transparent, no blur
+  const isHomePage = pathname === '/';
+  const navBgClass = (isHomePage && !scrolled)
+    ? 'bg-transparent' // fully transparent on home page when at the top
+    : 'bg-theoh-beige/95 backdrop-blur-md border-b border-theoh-border shadow-sm'; // premium background on subpages or when scrolled
 
   return (
     <nav
-      className={`sticky top-0 z-40 w-full ${navBgClass} transition-colors duration-300`}
+      className={`sticky top-0 z-40 w-full ${navBgClass} transform transition-all duration-300 ${
+        isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">

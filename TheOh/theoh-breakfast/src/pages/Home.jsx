@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Flame, Check, ShieldCheck, Zap, Bike } from 'lucide-react';
+import { Flame, Check, ShieldCheck, Zap, Bike, Milk, Package, Leaf } from 'lucide-react';
 import { Hero } from '../components/home/Hero';
 import { api } from '../services/api';
 import { COMBOS } from '../data';
@@ -97,6 +97,95 @@ export function Home() {
         </div>
       </section>
 
+      {/* Our Purity & Sustainability Promise Section */}
+      <section className="bg-white border-y border-theoh-border/40 py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Decorative background shapes */}
+        <div className="absolute top-0 left-0 w-80 h-80 bg-theoh-lightOrange/20 rounded-full blur-3xl -ml-20 -mt-20 pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-theoh-green/5 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-black uppercase tracking-widest text-[#E8894A] bg-[#FFF0E0] px-4 py-2 rounded-full border border-[#FFF0E0]">
+              Our Promise
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-theoh-brown tracking-tight mt-6">
+              Purity in Every Spoonful, Care for the Planet
+            </h2>
+            <p className="text-theoh-muted text-sm sm:text-base mt-4 leading-relaxed font-medium">
+              We believe a healthy breakfast shouldn't compromise on purity or sustainability. Here is how we build Naturally Eat & Fit to be good for your body and gentle on the earth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto">
+            {/* Card 1: Buffalo Milk */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-theoh-cream/80 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-theoh-border/50 shadow-premium hover:shadow-premium-hover transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="w-14 h-14 rounded-2xl bg-[#E8EAF6] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <Milk size={28} className="text-[#3F51B5]" />
+                </div>
+                <h3 className="text-xl font-black text-theoh-brown mb-4">Pure Organic Buffalo Milk</h3>
+                <p className="text-theoh-muted text-sm leading-relaxed mb-6 font-medium">
+                  Unlike conventional dairy or heavily processed powders, we soak our oats exclusively in fresh, organic buffalo milk. Rich in protein, calcium, and healthy fats, it provides a naturally thick, creamy texture that makes every bowl satisfying.
+                </p>
+              </div>
+              <div className="text-xs font-black text-[#3F51B5] uppercase tracking-wider bg-[#E8EAF6]/60 w-fit px-3 py-1.5 rounded-lg border border-[#3F51B5]/10">
+                100% Grass-Fed Dairy
+              </div>
+            </motion.div>
+
+            {/* Card 2: Eco-friendly packaging */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-theoh-cream/80 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-theoh-border/50 shadow-premium hover:shadow-premium-hover transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="w-14 h-14 rounded-2xl bg-[#FFE0B2] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <Package size={28} className="text-[#E65100]" />
+                </div>
+                <h3 className="text-xl font-black text-theoh-brown mb-4">100% Plastic-Free Boxes</h3>
+                <p className="text-theoh-muted text-sm leading-relaxed mb-6 font-medium">
+                  We are deeply committed to zero-waste delivery. All our breakfasts are packaged in entirely plastic-free, biodegradable paper boxes. From our cups to our wooden spoons, everything composts naturally back into the soil.
+                </p>
+              </div>
+              <div className="text-xs font-black text-[#E65100] uppercase tracking-wider bg-[#FFE0B2]/60 w-fit px-3 py-1.5 rounded-lg border border-[#E65100]/10">
+                Zero Plastic Waste
+              </div>
+            </motion.div>
+
+            {/* Card 3: Zero sugar / zero bad stuff */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-theoh-cream/80 backdrop-blur-sm p-8 sm:p-10 rounded-3xl border border-theoh-border/50 shadow-premium hover:shadow-premium-hover transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="w-14 h-14 rounded-2xl bg-[#E8F5E9] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                  <Leaf size={28} className="text-theoh-green" />
+                </div>
+                <h3 className="text-xl font-black text-theoh-brown mb-4">Zero Sugar & Artificials</h3>
+                <p className="text-theoh-muted text-sm leading-relaxed mb-6 font-medium">
+                  Clean fuel means nothing hidden. We never use refined sugars, high-fructose corn syrups, or artificial coloring agents. Sweetness is derived exclusively from whole fruits and a touch of raw organic honey or dates.
+                </p>
+              </div>
+              <div className="text-xs font-black text-[#2E7D32] uppercase tracking-wider bg-[#E8F5E9]/60 w-fit px-3 py-1.5 rounded-lg border border-[#2E7D32]/10">
+                100% Clean Nutrition
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Customer Favorites / Combos Section */}
       <section className="bg-theoh-cream border-y border-theoh-border/40 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +235,7 @@ export function Home() {
                       onClick={() => navigate('/menu', { state: { combo } })}
                       className="bg-theoh-lightOrange hover:bg-theoh-orange text-theoh-orange hover:text-white font-bold text-xs px-5 py-2.5 rounded-full transition-all group-hover:scale-105"
                     >
-                      Customize →
+                      View All →
                     </button>
                   </div>
                 </div>
