@@ -1,3 +1,5 @@
+import { IMAGE_ASSETS } from './imageAssets';
+
 export const oatsBreads = [
   // 1. High Protein Brown Rice Bowls
   { 
@@ -7,7 +9,7 @@ export const oatsBreads = [
     tags: ["High Protein"], 
     category: "High Protein Brown Rice Bowls",
     desc: "Steamed organic brown rice loaded with premium lean grilled chicken breast, roasted broccoli, edamame, and zero-sugar homemade dressings.",
-    image: "/assets/images/brown_rice_bowl.png",
+    image: IMAGE_ASSETS.brownRiceBowl,
     nutrition: { calories: "450 kcal", protein: "35g", carbs: "52g", fiber: "6g", fat: "8g" },
     benefit: "Excellent for muscle recovery and maintaining lean mass."
   },
@@ -18,7 +20,7 @@ export const oatsBreads = [
     tags: ["High Protein"], 
     category: "High Protein Brown Rice Bowls",
     desc: "Wholesome organic brown rice served with high-protein grilled paneer cubes, roasted seasonal veggies, and signature sugar-free dressing.",
-    image: "/assets/images/brown_rice_bowl.png",
+    image: IMAGE_ASSETS.brownRiceBowl,
     nutrition: { calories: "480 kcal", protein: "22g", carbs: "54g", fiber: "6g", fat: "14g" },
     benefit: "Slow-digesting protein fuels energy throughout the afternoon."
   },
@@ -30,7 +32,7 @@ export const oatsBreads = [
     tags: ["High Protein"], 
     category: "High Protein Quinoa Rice Bowls",
     desc: "Nutrient-dense organic quinoa served with grilled chicken breast, sliced avocado, edamame, and light herb vinaigrette.",
-    image: "/assets/images/quinoa_rice_bowl.png",
+    image: IMAGE_ASSETS.quinoaRiceBowl,
     nutrition: { calories: "420 kcal", protein: "38g", carbs: "44g", fiber: "8g", fat: "9g" },
     benefit: "Complete amino acid profile boosts metabolism and muscle repair."
   },
@@ -41,7 +43,7 @@ export const oatsBreads = [
     tags: ["High Protein"], 
     category: "High Protein Quinoa Rice Bowls",
     desc: "Organic quinoa bowl topped with high protein grilled tofu, shredded carrots, spinach leaves, and fresh citrus dressing.",
-    image: "/assets/images/quinoa_rice_bowl.png",
+    image: IMAGE_ASSETS.quinoaRiceBowl,
     nutrition: { calories: "390 kcal", protein: "20g", carbs: "46g", fiber: "8g", fat: "10g" },
     benefit: "100% plant-based protein rich in iron and heart-healthy fats."
   },
@@ -53,7 +55,7 @@ export const oatsBreads = [
     tags: ["Fiber Rich"], 
     category: "Lean Life Salads",
     desc: "Crisp organic baby spinach, arugula, cherry tomatoes, sliced cucumbers, and avocado, sprinkled with walnuts and chia seeds.",
-    image: "/assets/images/lean_life_salad.png",
+    image: IMAGE_ASSETS.leanLifeSalad,
     nutrition: { calories: "180 kcal", protein: "6g", carbs: "12g", fiber: "7g", fat: "12g" },
     benefit: "Antioxidant-rich greens support cellular health and weight management."
   },
@@ -64,7 +66,7 @@ export const oatsBreads = [
     tags: ["Healthy Fats"], 
     category: "Lean Life Salads",
     desc: "Fresh avocado chunks, mixed organic greens, sunflower seeds, and citrus segments, tossed in extra virgin olive oil. 100% clean nutrition.",
-    image: "/assets/images/lean_life_salad.png",
+    image: IMAGE_ASSETS.leanLifeSalad,
     nutrition: { calories: "240 kcal", protein: "8g", carbs: "16g", fiber: "9g", fat: "18g" },
     benefit: "Healthy monounsaturated fats keep sugar cravings at bay."
   },
@@ -76,7 +78,7 @@ export const oatsBreads = [
     tags: ["Fiber Rich", "Fresh Fruits"], 
     category: "Overnight Oats Bowls",
     desc: "A wholesome mix of organic oats slow-soaked overnight in pure organic buffalo milk, topped with handpicked seasonal fruits and crunchy premium nuts. Zero added sugar.",
-    image: "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=600&q=80",
+    image: IMAGE_ASSETS.overnightOatsBowl,
     nutrition: { calories: "310 kcal", protein: "12g", carbs: "48g", fiber: "9g", fat: "8g" },
     benefit: "Steady morning energy release and improved digestion."
   },
@@ -87,7 +89,7 @@ export const oatsBreads = [
     tags: ["High Protein", "Healthy Fats"], 
     category: "Overnight Oats Bowls",
     desc: "Classic organic oats slow-soaked in rich, creamy organic buffalo milk, loaded with premium raisins, almonds, walnuts, and select premium dried fruits. 100% clean nutrition.",
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80",
+    image: IMAGE_ASSETS.overnightOatsBowl,
     nutrition: { calories: "340 kcal", protein: "14g", carbs: "50g", fiber: "8g", fat: "10g" },
     benefit: "Packed with micronutrients and iron to enhance cognitive focus."
   },
@@ -98,7 +100,7 @@ export const oatsBreads = [
     tags: ["Fresh Fruits", "Fiber Rich"], 
     category: "Overnight Oats Bowls",
     desc: "Light and healthy oatmeal prepared with organic buffalo milk and topped with fresh seasonal fruit slices. Naturally sweetened, zero sugars or artificial colors.",
-    image: "https://images.unsplash.com/photo-1614961909372-5e11b6a0ae54?w=600&q=80",
+    image: IMAGE_ASSETS.overnightOatsBowl,
     nutrition: { calories: "260 kcal", protein: "10g", carbs: "46g", fiber: "8g", fat: "4g" },
     benefit: "Vitamin-rich fruits support a healthy immune system."
   },
@@ -109,7 +111,7 @@ export const oatsBreads = [
     tags: ["High Protein"], 
     category: "Overnight Oats Bowls",
     desc: "Protein-packed classic rolled oats infused with rich dark cocoa, organic plant protein, and pure organic buffalo milk. Zero sugars, zero artificial colors, nothing bad.",
-    image: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&q=80",
+    image: IMAGE_ASSETS.overnightOatsBowl,
     nutrition: { calories: "380 kcal", protein: "28g", carbs: "42g", fiber: "8g", fat: "7g" },
     benefit: "Satisfies sweet cravings healthily while promoting muscle protein synthesis."
   },
@@ -120,7 +122,7 @@ export const oatsBreads = [
     tags: ["Fiber Rich"], 
     category: "Overnight Oats Bowls",
     desc: "Traditional Swiss-style muesli featuring multi-grains, raw honey, select seeds, and sun-dried fruit bits. Best served with cold organic buffalo milk. Zero artificial colors.",
-    image: "https://images.unsplash.com/photo-1504308805006-0f7a5f1adea4?w=600&q=80",
+    image: IMAGE_ASSETS.overnightOatsBowl,
     nutrition: { calories: "290 kcal", protein: "11g", carbs: "49g", fiber: "7g", fat: "6g" },
     benefit: "Heart-healthy grains aid cholesterol management."
   },
@@ -131,7 +133,7 @@ export const oatsBreads = [
     tags: ["Fiber Rich"], 
     category: "Overnight Oats Bowls",
     desc: "Simplicity at its best. Perfectly soaked in pure organic buffalo milk or slow-boiled. The classic healthy canvas for custom toppings. Zero sugars, zero artificial colors.",
-    image: "https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=600&q=80",
+    image: IMAGE_ASSETS.overnightOatsBowl,
     nutrition: { calories: "190 kcal", protein: "8g", carbs: "32g", fiber: "6g", fat: "3g" },
     benefit: "Beta-glucan fiber supports digestion and metabolic balance."
   },
@@ -143,7 +145,7 @@ export const oatsBreads = [
     tags: ["Fiber Rich"], 
     category: "Cold Pressed Juices",
     desc: "100% raw juice cold-pressed from fresh organic celery, green apple, cucumber, mint, and ginger. Zero water, zero sugars, zero preservatives.",
-    image: "/assets/images/cold_pressed_juice.png",
+    image: IMAGE_ASSETS.coldPressedJuice,
     nutrition: { calories: "95 kcal", protein: "3g", carbs: "18g", fiber: "4g", fat: "0.5g" },
     benefit: "Highly alkalizing juice that flushes toxins and hydrates cells."
   },
@@ -154,7 +156,7 @@ export const oatsBreads = [
     tags: ["Fresh Fruits"], 
     category: "Cold Pressed Juices",
     desc: "100% organic cold-pressed fresh oranges. High in Vitamin C, naturally sweet, zero sugars, zero added water.",
-    image: "/assets/images/cold_pressed_juice.png",
+    image: IMAGE_ASSETS.coldPressedJuice,
     nutrition: { calories: "110 kcal", protein: "2g", carbs: "24g", fiber: "2g", fat: "0.2g" },
     benefit: "Burst of vitamin C provides skin health and immune defense."
   }

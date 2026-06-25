@@ -53,10 +53,14 @@ export function Home() {
       }
     };
     fetchCombos();
-    return () => {
-      active = false;
-    };
   }, []);
+
+  // Scroll to top when combos loading finishes (ensures page starts at top after height hydration)
+  useEffect(() => {
+    if (!loadingCombos) {
+      window.scrollTo(0, 0);
+    }
+  }, [loadingCombos]);
 
   return (
     <div className="bg-theoh-beige overflow-hidden">
@@ -232,7 +236,7 @@ export function Home() {
                   <div className="flex justify-between items-center border-t border-theoh-border/30 pt-4">
                     <span className="text-2xl font-black text-theoh-brown">₹{combo.price}</span>
                     <button
-                      onClick={() => navigate('/menu', { state: { combo } })}
+                      onClick={() => navigate('/menu')}
                       className="bg-theoh-lightOrange hover:bg-theoh-orange text-theoh-orange hover:text-white font-bold text-xs px-5 py-2.5 rounded-full transition-all group-hover:scale-105"
                     >
                       View All →

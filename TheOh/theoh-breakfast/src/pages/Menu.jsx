@@ -80,6 +80,13 @@ export function Menu() {
     };
   }, []);
 
+  // Scroll to top when menu loading finishes (ensures page starts at top after height hydration)
+  useEffect(() => {
+    if (!menuLoading) {
+      window.scrollTo(0, 0);
+    }
+  }, [menuLoading]);
+
   // Handle preselection if coming from home page favorite customization
   useEffect(() => {
     if (location.state && location.state.combo && dynamicOatsBreads.length > 0) {

@@ -3,6 +3,7 @@ import { fruits } from './fruits';
 import { nuts } from './nuts';
 import { seeds } from './seeds';
 import { butters } from './butters';
+import { IMAGE_ASSETS } from './imageAssets';
 
 export { oatsBreads } from './oatsBreads';
 export { fruits } from './fruits';
@@ -100,5 +101,5 @@ export const REVIEWS = [
 ];
 
 export const WHATSAPP_NUMBER = "919876543210";
-export const HERO_BG = "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=1400&q=80";
-export const STORY_BG = "https://images.unsplash.com/photo-1504308805006-0f7a5f1adea4?w=1400&q=80";
+export const HERO_BG = IMAGE_ASSETS.heroBg;
+export const STORY_BG = IMAGE_ASSETS.storyBg;
