@@ -12,17 +12,34 @@ export function FloatingCart() {
       {totalCartItems > 0 && !isCartOpen && (
         <motion.button
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1, 
+            y: [0, -6, 0] // gentle oscillation loop
+          }}
           exit={{ opacity: 0, y: 50, scale: 0.9 }}
+          transition={{
+            y: {
+              repeat: Infinity,
+              duration: 2.5,
+              ease: "easeInOut"
+            },
+            opacity: { duration: 0.3 },
+            scale: { duration: 0.3 }
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => setIsCartOpen(true)}
-          className="fixed fixed bottom-6 left-0 right-0 mx-auto w-fit flex items-center justify-center gap-4 bg-[#004700] text-white py-4 px-7 rounded-full shadow-[0_10px_30px_rgba(0,71,0,0.22)] hover:shadow-[0_14px_40px_rgba(0,71,0,0.28)] hover:bg-[#003300] transition-all duration-300 select-none whitespace-nowrap md:bottom-8"        >
-          <ShoppingCart size={20} className="text-white" />
-          <span className="font-bold text-sm">
-            {totalCartItems} Item{totalCartItems > 1 ? 's' : ''} • {formatINR(totalCartPrice)}
-          </span>
-          <span className="border-l border-white/30 h-5 mx-2"></span>
-          <span className="font-bold uppercase tracking-wider text-xs">
-            VIEW CART →
+          className="fixed bottom-6 right-6 z-40 flex items-center justify-center gap-3 bg-[#004700] text-white py-3.5 px-5.5 rounded-full shadow-floating hover:bg-[#003300] transition-all select-none whitespace-nowrap md:bottom-8 md:right-8"
+        >
+          <div className="relative mr-1 flex items-center">
+            <ShoppingCart size={18} className="text-white" />
+            <span className="absolute -top-2 -right-2.5 min-w-4 h-4 flex items-center justify-center rounded-full bg-white text-[#004700] text-[9px] font-black border border-[#004700] px-0.5">
+              {totalCartItems}
+            </span>
+          </div>
+          <span className="font-extrabold uppercase tracking-wider text-xs">
+            View Cart ({formatINR(totalCartPrice)})
           </span>
         </motion.button>
       )}

@@ -1,11 +1,9 @@
 // src/components/common/Navbar.jsx
 import React from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, Leaf, Menu, X } from 'lucide-react';
-import { useCart } from '../../context/CartContext';
+import { Leaf, Menu, X } from 'lucide-react';
 
 export function Navbar() {
-  const { totalCartItems, setIsCartOpen } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const { pathname } = useLocation();
 
@@ -97,19 +95,7 @@ export function Navbar() {
               Order Now
             </Link>
 
-            {/* Cart Trigger Button */}
-            <button
-              onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 rounded-full bg-theoh-orange text-white hover:bg-[#B45014] transition-all shadow-premium hover:shadow-premium-hover active:scale-95 flex items-center justify-center gap-1 group"
-              aria-label="Open Cart"
-            >
-              <ShoppingCart size={18} className="group-hover:rotate-6 transition-transform" />
-              {totalCartItems > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 min-w-5 h-5 flex items-center justify-center rounded-full bg-white text-theoh-orange text-[10px] font-black border-2 border-theoh-orange px-1 animate-bounce">
-                  {totalCartItems}
-                </span>
-              )}
-            </button>
+
 
             {/* Hamburger Menu Button */}
             <button
