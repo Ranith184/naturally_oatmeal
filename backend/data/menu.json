@@ -271,7 +271,7 @@
       "tags": [
         "Healthy Fats"
       ],
-      "image": "https://images.unsplash.com/photo-1612459284970-e8f027596582?w=300&q=80",
+      "image": "/assets/images/almond.png",
       "category": "Spreads & Sweeteners",
       "inStock": true
     },
@@ -283,7 +283,7 @@
         "Healthy Fats",
         "High Protein"
       ],
-      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&q=80",
+      "image": "/assets/images/chocipeanut.png",
       "category": "Spreads & Sweeteners",
       "inStock": true
     },
@@ -295,7 +295,7 @@
         "Healthy Fats",
         "High Protein"
       ],
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80",
+      "image": "/assets/images/peanutbutter.jpg",
       "category": "Spreads & Sweeteners",
       "inStock": true
     },
@@ -304,7 +304,7 @@
       "name": "Honey",
       "price": 20,
       "tags": [],
-      "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=300&q=80",
+      "image": "/assets/images/honey.jpg",
       "category": "Spreads & Sweeteners",
       "inStock": true
     },
@@ -315,7 +315,7 @@
       "tags": [
         "Fresh Fruits"
       ],
-      "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=300&q=80",
+      "image": "/assets/images/apple.jpg",
       "category": "Fresh Fruits",
       "inStock": true
     },
@@ -370,7 +370,7 @@
       "tags": [
         "Fresh Fruits"
       ],
-      "image": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=300&q=80",
+      "image": "/assets/images/mango.jpg",
       "category": "Fresh Fruits",
       "inStock": true
     },
@@ -381,7 +381,7 @@
       "tags": [
         "Fresh Fruits"
       ],
-      "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=300&q=80",
+      "image": "/assets/images/promogranate.jpg",
       "category": "Fresh Fruits",
       "inStock": true
     },
@@ -404,7 +404,7 @@
         "Healthy Fats",
         "High Protein"
       ],
-      "image": "https://images.unsplash.com/photo-1571236252609-e6e0e3b25254?w=300&q=80",
+      "image": "/assets/images/allnuts.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -415,7 +415,7 @@
       "tags": [
         "Healthy Fats"
       ],
-      "image": "https://images.unsplash.com/photo-1574570173583-e0a7a5e39f5e?w=300&q=80",
+      "image": "/assets/images/almond.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -424,7 +424,7 @@
       "name": "Black Raisins",
       "price": 30,
       "tags": [],
-      "image": "https://images.unsplash.com/photo-1596591868231-05e808fd3b44?w=300&q=80",
+      "image": "/assets/images/blackraisins.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -435,7 +435,7 @@
       "tags": [
         "Healthy Fats"
       ],
-      "image": "https://images.unsplash.com/photo-1567892737950-30c366a89102?w=300&q=80",
+      "image": "/assets/images/cashew.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -444,7 +444,7 @@
       "name": "Dates",
       "price": 30,
       "tags": [],
-      "image": "https://images.unsplash.com/photo-1600189020440-5a5ff59a2a39?w=300&q=80",
+      "image": "/assets/images/dates.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -453,7 +453,7 @@
       "name": "Green Raisin",
       "price": 30,
       "tags": [],
-      "image": "https://images.unsplash.com/photo-1596591868231-05e808fd3b44?w=300&q=80",
+      "image": "/assets/images/greenraisins.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -464,7 +464,7 @@
       "tags": [
         "High Protein"
       ],
-      "image": "https://images.unsplash.com/photo-1567567379834-1e4ea7eecb01?w=300&q=80",
+      "image": "/assets/images/peanuts.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -475,7 +475,7 @@
       "tags": [
         "Healthy Fats"
       ],
-      "image": "https://images.unsplash.com/photo-1611238573218-4efea4f4accd?w=300&q=80",
+      "image": "/assets/images/walnut.jpg",
       "category": "Premium Nuts",
       "inStock": true
     },
@@ -486,7 +486,7 @@
       "tags": [
         "Fiber Rich"
       ],
-      "image": "https://images.unsplash.com/photo-1609246397806-36b3cdb7e71e?w=300&q=80",
+      "image": "/assets/images/chia.jpg",
       "category": "Healthy Seeds",
       "inStock": true
     },
@@ -497,7 +497,7 @@
       "tags": [
         "Healthy Fats"
       ],
-      "image": "https://images.unsplash.com/photo-1596593046893-a4c5a0ef8f09?w=300&q=80",
+      "image": "/assets/images/pumpkin.jpg",
       "category": "Healthy Seeds",
       "inStock": true
     },
@@ -508,7 +508,7 @@
       "tags": [
         "Healthy Fats"
       ],
-      "image": "https://images.unsplash.com/photo-1503027572-46cbe74e49eb?w=300&q=80",
+      "image": "/assets/images/sunflower.jpg",
       "category": "Healthy Seeds",
       "inStock": true
     },
@@ -517,7 +517,7 @@
       "name": "Watermelon Seeds",
       "price": 20,
       "tags": [],
-      "image": "https://images.unsplash.com/photo-1582655008695-a1db8c59b9bb?w=300&q=80",
+      "image": "/assets/images/watermelonseeds.jpg",
       "category": "Healthy Seeds",
       "inStock": true
     }
