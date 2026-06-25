@@ -10,6 +10,7 @@ export { fruits } from './fruits';
 export { nuts } from './nuts';
 export { seeds } from './seeds';
 export { butters } from './butters';
+export { IMAGE_ASSETS } from './imageAssets';
 
 export const ADDONS = {
   "Spreads & Sweeteners": butters,

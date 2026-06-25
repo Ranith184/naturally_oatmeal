@@ -485,18 +485,20 @@ export function Menu() {
             initial={{ opacity: 0, scale: 0.8, y: -50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: -50 }}
-            className="fixed top-24 left-1/2 -translate-x-1/2 bg-[#2E7D32] border border-[#A5D6A7] text-white py-3.5 px-6 rounded-2xl shadow-xl flex items-center gap-2.5 z-55 font-bold text-sm tracking-wide select-none"
+            className="fixed top-24 left-4 right-4 sm:left-auto sm:right-6 sm:w-auto sm:max-w-md bg-[#004700] border border-white/20 text-white py-3.5 px-4 sm:px-6 rounded-2xl shadow-floating flex items-center gap-3 z-[100] font-bold text-xs sm:text-sm tracking-wide select-none"
           >
-            <span className="p-1 rounded-full bg-white/20">
-              <Check size={16} strokeWidth={3} />
+            <span className="p-1.5 rounded-full bg-white/20 shrink-0">
+              <Check size={16} strokeWidth={3} className="text-white" />
             </span>
-            <span>Customized breakfast successfully added!</span>
-            <button 
-              onClick={() => { setIsSuccessAdded(false); setIsCartOpen(true); }}
-              className="underline text-[#E8F5E9] hover:text-white ml-2 text-xs uppercase font-extrabold tracking-wider"
-            >
-              Checkout Now →
-            </button>
+            <div className="flex flex-1 flex-wrap items-center justify-between gap-x-3 gap-y-1.5 min-w-0">
+              <span className="leading-snug">Customized breakfast successfully added!</span>
+              <button 
+                onClick={() => { setIsSuccessAdded(false); setIsCartOpen(true); }}
+                className="underline text-white hover:text-white/80 transition-colors text-[10px] sm:text-xs uppercase font-extrabold tracking-wider shrink-0"
+              >
+                Checkout Now →
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

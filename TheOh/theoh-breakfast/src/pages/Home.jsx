@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Flame, Check, ShieldCheck, Zap, Bike, Milk, Package, Leaf } from 'lucide-react';
 import { Hero } from '../components/home/Hero';
 import { api } from '../services/api';
-import { COMBOS } from '../data';
+import { COMBOS, WHATSAPP_NUMBER, IMAGE_ASSETS } from '../data';
 
 export function Home() {
   const navigate = useNavigate();
@@ -61,6 +61,48 @@ export function Home() {
       window.scrollTo(0, 0);
     }
   }, [loadingCombos]);
+
+  const subscriptions = [
+    {
+      id: "sub-salad",
+      name: "Lean Life Salad",
+      price: 4999,
+      weight: "(300 gms)",
+      image: IMAGE_ASSETS.leanLifeSalad,
+      bgColor: "bg-[#1E3F20]",
+      hexColor: "#1E3F20",
+      features: [
+        "Free Home &",
+        "Office Delivery"
+      ]
+    },
+    {
+      id: "sub-rice",
+      name: "High Protein Brown Rice Bowls",
+      price: 5499,
+      weight: "(450 gms)",
+      image: IMAGE_ASSETS.brownRiceBowl,
+      bgColor: "bg-[#9E4F27]",
+      hexColor: "#9E4F27",
+      features: [
+        "Free Home &",
+        "Office Delivery"
+      ]
+    },
+    {
+      id: "sub-oats",
+      name: "Overnight Oats Bowl",
+      price: 5799,
+      weight: "(550 gms)",
+      image: IMAGE_ASSETS.overnightOatsBowl,
+      bgColor: "bg-[#2E5A27]",
+      hexColor: "#2E5A27",
+      features: [
+        "Free Home &",
+        "Office Delivery"
+      ]
+    }
+  ];
 
   return (
     <div className="bg-theoh-beige overflow-hidden">
@@ -243,6 +285,93 @@ export function Home() {
                     </button>
                   </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Monthly Subscriptions Section */}
+      <section className="bg-white border-y border-theoh-border/40 py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32] bg-[#E8F5E9] px-3.5 py-1.5 rounded-full">
+              Healthy Monthly Plans
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-theoh-brown tracking-tight mt-4 uppercase">
+              Monthly Subscriptions
+            </h2>
+            <p className="text-theoh-muted text-sm sm:text-base mt-3">
+              Commit to your health. Choose a convenient monthly plan and enjoy fresh, nutritious breakfasts delivered to your door every single day.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {subscriptions.map((sub, idx) => (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                key={sub.id}
+                className={`${sub.bgColor} rounded-[32px] p-6 sm:p-8 text-white shadow-premium hover:shadow-2xl hover:scale-[1.02] transition-all flex flex-col justify-between gap-6 group relative overflow-hidden`}
+              >
+                {/* Visual circle accents in background */}
+                <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-white/5 rounded-full group-hover:scale-150 transition-transform duration-500" />
+                
+                <div>
+                  {/* Circular Dish Image */}
+                  <div 
+                    className="w-32 h-32 rounded-full bg-cover bg-center border-4 border-white/15 shadow-lg bg-theoh-beige mx-auto mb-5 shrink-0"
+                    style={{ backgroundImage: `url(${sub.image})` }}
+                  />
+
+                  {/* Details Stack */}
+                  <div className="text-center">
+                    <h3 className="text-lg sm:text-xl font-black uppercase tracking-wide leading-tight mb-2">
+                      {sub.name}
+                    </h3>
+                    <span className="inline-block text-[11px] font-bold text-white/80 bg-white/10 px-2.5 py-0.5 rounded-full mb-4">
+                      {sub.weight}
+                    </span>
+                    
+                    {/* Price Box Badge */}
+                    <div className="bg-white rounded-2xl py-3 px-5 flex flex-col items-center justify-center text-center w-full mb-5 shadow-sm">
+                      <span className="text-xl sm:text-2xl font-black leading-none text-black">
+                        ₹{sub.price}/-
+                      </span>
+                      <span className="text-[9px] font-black text-theoh-muted uppercase tracking-widest mt-1">
+                        Per Month
+                      </span>
+                    </div>
+
+                    {/* Bullet points with checkmarks */}
+                    <div className="flex flex-col gap-2.5 items-start w-fit mx-auto mb-2">
+                      {sub.features.map((feature, fIdx) => (
+                        <div key={fIdx} className="flex items-center gap-2">
+                          {/* Golden check circle */}
+                          <span className="flex items-center justify-center w-4 h-4 rounded-full border border-yellow-400/40 text-yellow-400 shrink-0">
+                            <Check size={10} strokeWidth={4} />
+                          </span>
+                          <span className="text-xs font-extrabold text-white/95 leading-none">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Action button */}
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi Naturally Eat & Fit, I would like to subscribe to the *${sub.name}* Monthly Subscription Plan (₹${sub.price}/- per month). Please help me set it up.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-white hover:bg-white/90 px-8 py-3.5 rounded-full font-black text-xs uppercase tracking-wider text-center shadow-md active:scale-95 transition-all shrink-0 flex items-center justify-center gap-2 group-hover:scale-105"
+                  style={{ color: sub.hexColor }}
+                >
+                  Subscribe Now
+                </a>
               </motion.div>
             ))}
           </div>
