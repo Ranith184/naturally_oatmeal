@@ -86,7 +86,7 @@ export const COMBOS = [
     "tag": "Raw & Fresh",
     "inStock": true
   }
-];
+];;
 
 export const TAG_COLORS = {
   "High Protein": { bg: "bg-[#FFF3E0]", text: "text-[#E65100]", border: "border-[#FFCC80]" },
