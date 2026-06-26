@@ -42,9 +42,11 @@ const saveLocalMenu = (menu) => {
 
 // Fallback logic simulating Express backend when API is not available
 function handleFallback(endpoint, method, body, requireAuth) {
+  const safeBody = body || {};
+
   // 1. Auth Endpoint
   if (endpoint === '/auth/login' && method === 'POST') {
-    const { password } = body;
+    const { password } = safeBody;
     if (password === 'admin123') {
       return { token: 'mock_jwt_token_for_vercel' };
     } else {
@@ -65,9 +67,9 @@ function handleFallback(endpoint, method, body, requireAuth) {
     }
     const newOrder = {
       id: `TH-${nextNumber}`,
-      items: body.items,
-      customer: body.customer,
-      totalPrice: body.totalPrice,
+      items: safeBody.items,
+      customer: safeBody.customer,
+      totalPrice: safeBody.totalPrice,
       status: 'pending',
       createdAt: new Date().toISOString()
     };
@@ -91,7 +93,7 @@ function handleFallback(endpoint, method, body, requireAuth) {
   if (endpoint.startsWith('/orders/') && endpoint.endsWith('/status') && method === 'PATCH') {
     const parts = endpoint.split('/');
     const orderId = parts[2];
-    const { status } = body;
+    const { status } = safeBody;
     const orders = getLocalOrders();
     const index = orders.findIndex(o => o.id === orderId);
     if (index === -1) {
@@ -161,8 +163,8 @@ function handleFallback(endpoint, method, body, requireAuth) {
   // 8. Menu Item POST (Add Menu Item)
   if (endpoint === '/menu/items' && method === 'POST') {
     const menu = getLocalMenu();
-    const { type, name, price, tags, desc, image, category } = body;
-    const inStock = body.inStock !== false;
+    const { type, name, price, tags, desc, image, category } = safeBody;
+    const inStock = safeBody.inStock !== false;
     let newItem = {};
 
     if (type === 'base') {
@@ -204,7 +206,7 @@ function handleFallback(endpoint, method, body, requireAuth) {
         });
         nextNum = Math.max(...nums, 0) + 1;
       }
-      newItem = { id: `c${nextNum}`, name, base: body.base || '', addons: body.addons || [], price, tag: body.tag || '', image: body.image || '', inStock };
+      newItem = { id: `c${nextNum}`, name, base: safeBody.base || '', addons: safeBody.addons || [], price, tag: safeBody.tag || '', image: safeBody.image || '', inStock };
       menu.combos.push(newItem);
     } else {
       throw new Error('Invalid item type');
@@ -222,7 +224,7 @@ function handleFallback(endpoint, method, body, requireAuth) {
 
     const baseIndex = menu.bases.findIndex(b => b.id === itemId);
     if (baseIndex !== -1) {
-      const updated = { ...menu.bases[baseIndex], ...body };
+      const updated = { ...menu.bases[baseIndex], ...safeBody };
       menu.bases[baseIndex] = updated;
       saveLocalMenu(menu);
       return updated;
@@ -230,7 +232,7 @@ function handleFallback(endpoint, method, body, requireAuth) {
 
     const addonIndex = menu.addons.findIndex(a => a.id === itemId);
     if (addonIndex !== -1) {
-      const updated = { ...menu.addons[addonIndex], ...body };
+      const updated = { ...menu.addons[addonIndex], ...safeBody };
       menu.addons[addonIndex] = updated;
       saveLocalMenu(menu);
       return updated;
@@ -238,7 +240,7 @@ function handleFallback(endpoint, method, body, requireAuth) {
 
     const comboIndex = menu.combos.findIndex(c => c.id === itemId);
     if (comboIndex !== -1) {
-      const updated = { ...menu.combos[comboIndex], ...body };
+      const updated = { ...menu.combos[comboIndex], ...safeBody };
       menu.combos[comboIndex] = updated;
       saveLocalMenu(menu);
       return updated;
