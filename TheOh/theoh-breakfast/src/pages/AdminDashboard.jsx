@@ -212,6 +212,11 @@ export function AdminDashboard({ onLogout }) {
       loadMenu();
     });
 
+    socket.on('orders_cleared', () => {
+      setOrders([]);
+      api.fetchStats().then(s => setStats(s)).catch(console.error);
+    });
+
     return () => {
       socket.disconnect();
     };
@@ -261,6 +266,19 @@ export function AdminDashboard({ onLogout }) {
       await loadMenu();
     } catch (err) {
       alert('Failed to delete menu item: ' + err.message);
+    }
+  };
+
+  // Clear all orders from the database
+  const handleClearAllOrders = async () => {
+    if (!window.confirm('Are you sure you want to permanently delete all orders from the database? This action cannot be undone.')) return;
+    try {
+      await api.clearOrders();
+      setOrders([]);
+      const fetchedStats = await api.fetchStats();
+      setStats(fetchedStats);
+    } catch (err) {
+      alert('Failed to clear orders: ' + err.message);
     }
   };
 
@@ -597,6 +615,16 @@ export function AdminDashboard({ onLogout }) {
                         {status.replace(/_/g, ' ')}
                       </button>
                     ))}
+
+                    {/* Clear All Orders Button */}
+                    <button
+                      onClick={handleClearAllOrders}
+                      className="px-3.5 py-1.5 bg-red-50 hover:bg-red-100 border border-red-200 text-red-600 rounded-xl text-xs font-bold transition-all flex items-center gap-1 ml-auto sm:ml-4"
+                      title="Clear all orders from database"
+                    >
+                      <Trash2 size={13} />
+                      <span>Clear All</span>
+                    </button>
                   </div>
 
                 </div>

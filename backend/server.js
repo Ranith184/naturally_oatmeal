@@ -6,7 +6,7 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getOrders, createOrder, updateOrderStatus } from './db.js';
+import { getOrders, createOrder, updateOrderStatus, clearOrders } from './db.js';
 import { getMenu, addMenuItem, updateMenuItem, deleteMenuItem } from './menuDb.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -113,6 +113,18 @@ app.get('/api/orders', authenticateToken, async (req, res) => {
   } catch (error) {
     console.error('Error fetching orders:', error);
     res.status(500).json({ error: 'Failed to fetch orders' });
+  }
+});
+
+// Clear all orders (Protected)
+app.delete('/api/orders', authenticateToken, async (req, res) => {
+  try {
+    await clearOrders();
+    io.emit('orders_cleared');
+    res.json({ message: 'All orders cleared successfully' });
+  } catch (error) {
+    console.error('Error clearing orders:', error);
+    res.status(500).json({ error: 'Failed to clear orders' });
   }
 });
 

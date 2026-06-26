@@ -102,8 +102,18 @@ async function updateOrderStatus(id, status) {
   throw new Error('Failed to update order status');
 }
 
+// Clear all orders
+async function clearOrders() {
+  const success = await saveOrders([]);
+  if (success) {
+    return true;
+  }
+  throw new Error('Failed to clear orders');
+}
+
 export {
   getOrders,
   createOrder,
-  updateOrderStatus
+  updateOrderStatus,
+  clearOrders
 };

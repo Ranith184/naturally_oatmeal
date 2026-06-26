@@ -68,6 +68,10 @@ export const api = {
     return apiRequest('/orders/stats', 'GET', null, true);
   },
 
+  clearOrders: async () => {
+    return apiRequest('/orders', 'DELETE', null, true);
+  },
+
   // Menu routes
   fetchMenu: async () => {
     return apiRequest('/menu', 'GET');
