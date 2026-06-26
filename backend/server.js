@@ -4,8 +4,13 @@ import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { getOrders, createOrder, updateOrderStatus } from './db.js';
 import { getMenu, addMenuItem, updateMenuItem, deleteMenuItem } from './menuDb.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 dotenv.config();
 
@@ -22,6 +27,10 @@ app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
+
+// Serve static files from Vite build
+const frontendDistPath = path.join(__dirname, '..', 'TheOh', 'theoh-breakfast', 'dist');
+app.use(express.static(frontendDistPath));
 
 // Create HTTP server and bind Socket.io
 const httpServer = createServer(app);
@@ -253,6 +262,18 @@ app.delete('/api/menu/items/:id', authenticateToken, async (req, res) => {
     console.error('Error deleting menu item:', error);
     res.status(500).json({ error: 'Failed to delete menu item' });
   }
+});
+
+// Catch-all route to serve index.html for client-side routing (React Router)
+app.get('*', (req, res) => {
+  if (req.path.startsWith('/api')) {
+    return res.status(404).json({ error: 'API endpoint not found' });
+  }
+  res.sendFile(path.join(frontendDistPath, 'index.html'), (err) => {
+    if (err) {
+      res.status(500).send("Frontend build not found. Please build the frontend project first.");
+    }
+  });
 });
 
 // WebSockets Connection Logger

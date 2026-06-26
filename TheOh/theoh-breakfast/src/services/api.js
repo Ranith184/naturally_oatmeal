@@ -1,5 +1,7 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-export const SOCKET_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') : 'http://localhost:5000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+export const SOCKET_URL = import.meta.env.VITE_API_URL 
+  ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '') 
+  : window.location.origin;
 
 // Helper to make API requests with optional authentication
 async function apiRequest(endpoint, method = 'GET', body = null, requireAuth = false) {
