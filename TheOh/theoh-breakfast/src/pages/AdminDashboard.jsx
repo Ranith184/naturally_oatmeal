@@ -217,8 +217,22 @@ export function AdminDashboard({ onLogout }) {
       api.fetchStats().then(s => setStats(s)).catch(console.error);
     });
 
+    const handleStorageChange = (e) => {
+      if (e.key === 'theoh_local_orders') {
+        api.fetchOrders().then(fetchedOrders => {
+          setOrders(fetchedOrders);
+          api.fetchStats().then(s => setStats(s)).catch(console.error);
+        }).catch(console.error);
+      }
+      if (e.key === 'theoh_local_menu') {
+        loadMenu();
+      }
+    };
+    window.addEventListener('storage', handleStorageChange);
+
     return () => {
       socket.disconnect();
+      window.removeEventListener('storage', handleStorageChange);
     };
   }, []);
 
